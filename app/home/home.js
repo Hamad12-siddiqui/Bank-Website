@@ -5,8 +5,8 @@ import Footer from '../component/Footer'
 const home = () => {
   return (
     <div>
-        <NavBar/>
-        {/* <Footer /> */}
+        {/* <NavBar/> */}
+        <Footer />
     </div>
   )
 }
