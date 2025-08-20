@@ -1,5 +1,5 @@
 import React from "react";
-import { UseCases, financialStats } from "../constant/Use_Cases.txt.js";
+import { UseCases, financialStats } from "../../constant/Use_Cases.txt.js";
 
 const Use_Cases = () => {
   return (

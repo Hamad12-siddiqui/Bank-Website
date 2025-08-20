@@ -1,6 +1,6 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { OurFeatures } from "../constant/Our_Features.txt.js";
+import { OurFeatures } from "../../constant/Our_Features.txt.js";
 
 const Our_Features = () => {
   return (

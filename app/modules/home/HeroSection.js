@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { HiMiniCheckBadge } from "react-icons/hi2";
 import { FiPlus } from "react-icons/fi";
 
-import CurrencySelector from "../constant/CountrySelector";
+import CurrencySelector from "../../constant/CountrySelector";
 
 const currencyRates = {
   USD: 1,
