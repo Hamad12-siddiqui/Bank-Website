@@ -7,21 +7,21 @@ import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <>
-    <div className='max-w-6xl mx-auto'>
+    <div className='max-w-6xl mx-auto px-4'>
     <div className='border-b '>
-    <div className='flex gap-2  justify-center  '>
+    <div className='flex gap-2 justify-center items-center py-6'>
     <Image 
     src = "/images/shape-30.svg"
     alt = "logo"
     width={40}
     height={40}
     />
-    <h1 className='text-xl font-medium flex text-white  items-center'>
+    <h1 className='text-xl font-medium flex text-white items-center'>
         Your Bank
     </h1>
      </div>
     <nav>
-        <ul className='flex gap-8 text-white justify-center my-8  '>
+        <ul className='flex flex-wrap gap-4 sm:gap-8 text-white justify-center my-4 sm:my-8 text-sm sm:text-base'>
             {footer.map((items, index) => {
                 return (
                 <li key={index}>{items.name}</li>
@@ -30,7 +30,7 @@ const Footer = () => {
         </ul>
     </nav>
    </div>
-   <div className='flex gap-4 justify-center mt-9 border-b'>
+   <div className='flex flex-col sm:flex-row gap-4 justify-center mt-9 border-b px-2'>
    {/* <div className='flex gap-1 '>
   <TbMessageCircleFilled className='text-[#CAFF33]' size={20}/>
   <p className='text-white'>hello@skillbirdge.com</p>
@@ -46,19 +46,19 @@ const Footer = () => {
 
 {info.map((items,index) => {
     return(
-        <div key={index} className='flex gap-1 mb-10'>
+        <div key={index} className='flex gap-1 mb-4 sm:mb-10 items-center'>
             <div className='text-[#CAFF33]'>
 {items.icon}
 </div>
-<div className='text-white'>
+<div className='text-white text-xs sm:text-base'>
 {items.text}
 </div>
         </div>
     )
 })}
    </div>
-   <div className='border rounded-full mt-10 p-2 flex'>
-    <div className='flex gap-2 flex-1'>
+   <div className=' md:border  rounded-full mt-10 p-2 flex flex-col md:flex-row items-center md:items-stretch gap-4 md:gap-0'>
+    <div className='flex gap-2 flex-1 justify-center md:justify-start mb-4 md:mb-0'>
     <div className='bg-[#CAFF33] p-2 rounded-full'>
 <FaFacebook  size={20}/>
 </div>
@@ -69,10 +69,10 @@ const Footer = () => {
 <FaLinkedin size={20} />
 </div>
 </div>
-<div className='text-white flex flex-1 items-center justify-center'>
+<div className='text-white flex flex-1 items-center justify-center text-xs sm:text-base'>
     <p>YourBank All Rights Reserved</p>
 </div>
-<div className='text-white flex gap-4 flex-1 justify-end items-center'>
+<div className='text-white flex gap-4 flex-1 justify-center md:justify-end items-center text-xs sm:text-base'>
     <p className='border-r pr-4'>
         Privacy Policy
     </p>
