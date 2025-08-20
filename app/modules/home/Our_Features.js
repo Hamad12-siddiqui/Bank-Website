@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+<<<<<<< HEAD:app/home/Our_Features.js
 import { FeaturesData } from "../constant/Our_Features.txt.js";
+=======
+import { OurFeatures } from "../../constant/Our_Features.txt.js";
+>>>>>>> e27d690764960f51b6072dc141a66752de0b95bd:app/modules/home/Our_Features.js
 
 const Our_Features = () => {
   const [selected, setSelected] = useState("Online Banking");

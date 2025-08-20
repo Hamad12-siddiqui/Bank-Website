@@ -1,5 +1,5 @@
 import React from "react";
-import { OurProducts } from "../constant/Out_Products.txt.js";
+import { OurProducts } from "../../constant/Out_Products.txt.js";
 
 const Our_Products = () => {
   return (

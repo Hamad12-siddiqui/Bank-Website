@@ -9,12 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "country-flag-icons": "^1.5.19",
+    "framer-motion": "^12.23.12",
     "next": "15.4.7",
     "react": "19.1.0",
+    "react-currency-flags": "^0.1.2",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
+<<<<<<< HEAD
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1"
+=======
+    "react-select": "^5.10.2",
+    "react-select-country-list": "^2.2.3"
+>>>>>>> e27d690764960f51b6072dc141a66752de0b95bd
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
