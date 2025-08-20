@@ -20,3 +20,17 @@ export const UseCases = [
     icon: "/images/Icon Container (6).svg",
   },
 ];
+export const financialStats = [
+  {
+    percentage: 78,
+    title: "Secure Retirement Planning"
+  },
+  {
+    percentage: 63,
+    title: "Manageable Debt Consolidation"
+  },
+  {
+    percentage: 91,
+    title: "Reducing financial burdens"
+  }
+];
