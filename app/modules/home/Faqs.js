@@ -25,7 +25,6 @@ const Faqs = () => {
             How do I open an account with YourBank?
         </h1>
         <p className='py-10 px-8  max-w-4xl mx-auto '>Opening an account with YourBank is easy. Simply visit our website and click on the "Open an Account" button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help.</p>
-
     </div> 
     </div>
     </div>
