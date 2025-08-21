@@ -6,8 +6,8 @@ import { FAQs } from "../../constant/Faqs.txt.js"; // 👈 txt ki jagah js/ts fi
 const Faqs = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // agar showAll false h to sirf pehle 4 dikhayenge warna sab
-  const visibleFaqs = showAll ? FAQs : FAQs.slice(0, 4);
+  // agar showAll false h to sirf pehle 2 dikhayenge warna sab
+  const visibleFaqs = showAll ? FAQs : FAQs.slice(0, 2);
 
   return (
     <div className="max-w-6xl mx-auto mt-16">
@@ -40,13 +40,20 @@ const Faqs = () => {
       </div>
 
       {/* Button */}
-      {!showAll && (
+      {!showAll ? (
         <div
           onClick={() => setShowAll(true)}
           className="flex justify-center items-center text-white gap-2 border-2 border-[#262626] bg-[#1C1C1C] w-[200px] mt-6 py-2 rounded-full cursor-pointer hover:bg-[#262626]"
         >
           <button>Load All FAQ’s</button>
           <MdKeyboardArrowDown size={22} />
+        </div>
+      ) : (
+        <div
+          onClick={() => setShowAll(false)}
+          className="flex justify-center items-center text-white gap-2 border-2 border-[#262626] bg-[#1C1C1C] w-[200px] mt-6 py-2 rounded-full cursor-pointer hover:bg-[#262626]"
+        >
+          <button>Show Less</button>
         </div>
       )}
     </div>
