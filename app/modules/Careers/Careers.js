@@ -7,6 +7,8 @@ import Our_Benefits from "./Our_Benefits";
 import Job_Openings from "./Job_Openings";
 import Faqs from "../home/Faqs";
 import Financial from "../home/Financial";
+import { BenefitsData } from "../../constant/OurBenefits.txt.js";
+
 
 const Careers = () => {
   return (
@@ -14,7 +16,8 @@ const Careers = () => {
       <NavBar />
       <Herosection />
       <Our_Values />
-      <Our_Benefits />
+      <Our_Benefits 
+       benefitsData={BenefitsData}/>
       <Job_Openings />
       <Faqs />
       <Financial
