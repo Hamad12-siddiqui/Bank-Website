@@ -110,7 +110,7 @@ const Our_Testimonials = () => {
         </div>
 
         {/* Slider Section */}
-      <div className="slider-container w-full overflow-hidden px-2 sm:px-6 mt-8 sm:mt-12">
+      <div className="slider-container w-full overflow-hidden px-8 sm:px-16 mt-8 sm:mt-12">
           <Slider {...settings}>
             {TestimonialsData.map((item) => (
               <div key={item.id} className="px-2 sm:px-4 py-4 sm:py-6">
