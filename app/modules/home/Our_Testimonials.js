@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-import { TestimonialsData } from "../../constant/Our_Testimonials.txt.js";
+import { BusinessTestimonialsData, TestimonialsData } from "../../constant/Our_Testimonials.txt.js";
+
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,10 +73,18 @@ const Our_Testimonials = () => {
       },
       {
         breakpoint: 640, // sm screens
-    settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 1 },
       }
     ],
   };
+
+  const [activeType, setActiveType] = React.useState("individual");
+
+  const handleTypeChange = (type) => {
+    setActiveType(type);
+  };
+
+  const carouselData = activeType === "individual" ? TestimonialsData : BusinessTestimonialsData;
 
   return (
     <div className="flex justify-center items-center px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
@@ -93,10 +103,16 @@ const Our_Testimonials = () => {
             </p>
           </div>
           <div className="flex justify-center items-center rounded-full gap-2 md:gap-4 px-2 py-2 border border-[#262626] bg-[#1C1C1C]">
-            <button className="text-xs sm:text-sm md:text-base font-medium px-3 md:px-4 py-2 rounded-full bg-[#CAFF33] text-black">
+            <button
+              className={`text-xs sm:text-sm md:text-base font-medium px-3 md:px-4 py-2 rounded-full ${activeType === "individual" ? "bg-[#CAFF33] text-black" : "text-white"}`}
+              onClick={() => handleTypeChange("individual")}
+            >
               For Individuals
             </button>
-            <button className="text-xs sm:text-sm md:text-base font-medium px-3 md:px-4 py-2 text-white">
+            <button
+              className={`text-xs sm:text-sm md:text-base font-medium px-3 md:px-4 py-2 rounded-full ${activeType === "business" ? "bg-[#CAFF33] text-black" : "text-white"}`}
+              onClick={() => handleTypeChange("business")}
+            >
               For Businesses
             </button>
           </div>
@@ -105,9 +121,9 @@ const Our_Testimonials = () => {
         {/* Slider Section */}
         <div className="slider-container px-2 sm:px-6 mt-8 sm:mt-12">
           <Slider {...settings}>
-            {TestimonialsData.map((item) => (
+            {carouselData.map((item) => (
               <div key={item.id} className="px-2 sm:px-4 py-4 sm:py-6">
-                <div className="h-[220px] sm:h-[250px] relative flex flex-col items-center justify-center p-4 sm:p-6 space-y-6 border-t-2">
+                <div className="h-[220px] sm:h-[250px] w-full relative flex flex-col items-center justify-center p-4 sm:p-6 space-y-6 border-t-2">
                   {/* Icon */}
                   <div className="absolute -top-6 bg-black px-2 py-1 ">
                     <img
