@@ -5,7 +5,7 @@ import { JobsData } from "../../constant/Jobopening.js";
 const Job_Openings = () => {
   return (
     <div className="flex justify-center items-center mt-10 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-6xl text-white space-y-6">
+      <div className="w-full max-w-6xl text-white space-y-6 text-center sm:text-start">
         {/* Heading */}
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#CAFF33]">
           Job Openings

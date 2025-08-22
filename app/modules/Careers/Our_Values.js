@@ -4,7 +4,7 @@ import {ValuesData} from "../../constant/OurValues.txt.js"
 const Our_Values = () => {
   return (
     <div className="flex justify-center items-center mt-15">
-      <div className="w-6xl text-white space-y-4 p-4 lg:p-0">
+      <div className="w-6xl text-center sm:text-start text-white space-y-4 p-4 lg:p-0">
         <h3 className="font-medium text-4xl">
           Our<span className="text-[#CAFF33]"> Values</span>
         </h3>

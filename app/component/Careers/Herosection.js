@@ -11,8 +11,8 @@ const Herosection = ({
 }) => {
   return (
     <div className="flex justify-center items-center mt-5">
-      <div className="w-6xl flex-col lg:flex p-6 rounded-lg bg-[#1C1C1C] bg-[url(/images/right.svg)] bg-no-repeat bg-right-top lg:relative">
-        <div className="w-full lg:w-[500px] h-auto space-y-4 p-8 rounded-2xl rounded-tr-none bg-black lg:absolute sm:text-start text-center">
+    <div className="w-6xl flex-col-reverse lg:flex-row flex p-6 rounded-lg bg-[#1C1C1C] bg-[url(/images/right.svg)] bg-no-repeat bg-right-top lg:relative">
+        <div className="w-full lg:w-[500px] h-auto space-y-4 p-8 rounded-b-2xl sm:rounded-2xl rounded-tr-none bg-black lg:absolute sm:text-start text-center">
           <p className="text-white">{heading}</p>
           <h3 className={`text-white font-medium sm:text-4xl text-2xl ${className}`}>
             {title}
@@ -22,7 +22,7 @@ const Herosection = ({
             {description}
           </p>
         </div>
-        <div className="w-full lg:w-3xl ml-0 lg:ml-83 ">
+        <div className="w-full lg:w-3xl ml-0 lg:ml-83  ">
             <img
               src={imageSrc}
               alt="Hero"
