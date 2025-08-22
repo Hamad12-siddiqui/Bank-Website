@@ -48,3 +48,31 @@ export const TestimonialsData = [
       "The mobile app is incredible! From paying bills to checking my credit score, everything is at my fingertips. Truly a modern banking experience."
   }
 ];
+
+
+export const BusinessTestimonialsData = [
+  {
+    id: 1,
+    name: "Acme Corp",
+    feedback:
+      "YourBank's business solutions streamlined our payroll and vendor payments. Their support is unmatched!"
+  },
+  {
+    id: 2,
+    name: "Tech Innovators",
+    feedback:
+      "We secured a business loan with ease. The process was transparent and fast. Highly recommended for startups."
+  },
+  {
+    id: 3,
+    name: "Green Fields",
+    feedback:
+      "International transactions are now hassle-free. YourBank's business banking is a game changer for us."
+  },
+  {
+    id: 4,
+    name: "LogiX Solutions",
+    feedback:
+      "The dashboard gives us real-time insights into our cash flow. YourBank truly understands business needs."
+  }
+];
