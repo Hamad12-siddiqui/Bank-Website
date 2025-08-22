@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-import { TestimonialsData } from "../constant/Our_Testimonials.txt";
+import { TestimonialsData } from "../../constant/Our_Testimonials.txt.js";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Our_Testimonials = () => {
-  // ✅ Custom Next Arrow
   const NextArrow = ({ onClick }) => {
     return (
       <button
@@ -16,7 +15,6 @@ const Our_Testimonials = () => {
                    w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full 
                    bg-[#CAFF33] border border-gray-700 shadow-lg hover:bg-[#b2f02c] transition"
       >
-        {/* Right Arrow Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
