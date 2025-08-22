@@ -36,7 +36,7 @@ const NavBar = () => {
 
         {/* Desktop Auth */}
         <div className="hidden md:flex justify-center items-center text-white space-x-6">
-          <Link href="/Sign Up" className="hover:underline">Sign Up</Link>
+          <Link href="/SignUp" className="hover:underline">Sign Up</Link>
           <Link
             href="/Login"
             className="text-black py-3 px-6 rounded-full bg-[#CAFF33]"
