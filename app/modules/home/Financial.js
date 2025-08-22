@@ -2,7 +2,7 @@ import React from "react";
 
 const Financial = () => {
   return (
-    <div className="flex justify-center items-center px-4 sm:px-6 lg:px-12 mb-10">
+    <div className="flex justify-center items-center px-4 sm:px-6 lg:px-12 mb-10 mt-10">
       <div className="w-full max-w-6xl border border-[#262626] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 py-10 px-6 rounded-2xl bg-[#1C1C1C] bg-[url('/images/bg.svg')] bg-no-repeat bg-left-top">
         <div className="flex-1 text-center md:text-left space-y-4">
           <h3 className="font-medium text-2xl sm:text-3xl lg:text-4xl leading-snug">
@@ -13,6 +13,7 @@ const Financial = () => {
             Ready to take control of your finances? Join YourBank now, and let us
             help you achieve your financial goals with our tailored solutions and
             exceptional customer service.
+
           </p>
         </div>
         <div className="flex-shrink-0">
