@@ -6,7 +6,7 @@ const PressRelease = () => {
   return (
     <>
   <div className='max-w-6xl mx-auto mt-10 px-4 sm:px-6 lg:px-8'>
-    <div>
+    <div className='text-center sm:text-start'>
       <h1 className='text-[#CAFF33] text-2xl sm:text-3xl font-bold'>
         Press Releases
       </h1>

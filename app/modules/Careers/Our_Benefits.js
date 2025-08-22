@@ -12,7 +12,7 @@ const Our_Benefits = ({
 }) => {
   return (
     <section className="w-full flex justify-center px-4 md:px-8 lg:px-16 py-12">
-<div className="max-w-6xl w-full md:text-left ">
+<div className="max-w-6xl w-full md:text-left text-center">
         <h3 className="text-3xl md:text-4xl font-semibold text-white">
           {heading}
         </h3>
