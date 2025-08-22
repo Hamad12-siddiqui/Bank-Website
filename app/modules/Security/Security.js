@@ -18,7 +18,6 @@ const Security = () => {
         heading=""
         className="max-w-sm"
       />
-
       <Our_Benefits
         benefitsData={Protect}
         heading={
@@ -27,12 +26,16 @@ const Security = () => {
           </>
         }
         description={
-          <>At YourBank, we prioritize the security and confidentiality of your financial information. Our state-of-the-art encryption technology and stringent data protection measures ensure your assets and transactions are safeguarded at all times.</>
+          <>
+            At YourBank, we prioritize the security and confidentiality of your
+            financial information. Our state-of-the-art encryption technology
+            and stringent data protection measures ensure your assets and
+            transactions are safeguarded at all times.
+          </>
         }
       />
       <Faqs />
       <Footer />
-      
     </>
   );
 };

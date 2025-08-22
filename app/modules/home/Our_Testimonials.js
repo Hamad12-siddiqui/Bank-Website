@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-import { TestimonialsData } from "../constant/Our_Testimonials.txt";
+import { TestimonialsData } from "../../constant/Our_Testimonials.txt.js";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

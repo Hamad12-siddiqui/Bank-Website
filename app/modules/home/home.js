@@ -7,6 +7,7 @@ import Use_Cases from "./Use_Cases";
 import Our_Features from "./Our_Features";
 import Faqs from "./Faqs";
 import Financial from "./Financial";
+import Our_Testimonials from "./Our_Testimonials";
 
 const home = () => {
   return (
@@ -17,6 +18,7 @@ const home = () => {
       <Use_Cases />
       <Our_Features />
       <Faqs />
+      <Our_Testimonials />
       <Financial
         titleWhite="Start your financial journey with"
         titleGreen="YourBank today!"
