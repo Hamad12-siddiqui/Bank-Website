@@ -13,7 +13,7 @@ const Our_Features = () => {
           <span className="text-white">Our </span>
           <span className="text-[#CAFF33]">Features</span>
         </h2>
-        <p className="font-light text-base sm:text-lg lg:text-xl text-[#B3B3B3] max-w-3xl">
+        <p className="font-light text-base sm:text-lg lg:text-xl text-[#B3B3B3] max-w-3xl sm:text-start text-center">
           Experience a host of powerful features at YourBank, including seamless
           online banking, secure transactions, and personalized financial
           insights, all designed to enhance your banking experience.

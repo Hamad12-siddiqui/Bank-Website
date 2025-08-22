@@ -50,11 +50,11 @@ const Footer = () => {
 
 {info.map((items,index) => {
     return(
-        <div key={index} className='flex gap-1 mb-4 sm:mb-10 items-center cursor-pointer'>
+        <div key={index} className='flex gap-1 mb-4 sm:mb-10 items-center cursor-pointer sm:justify-start justify-center'>
             <div className='text-[#CAFF33]'>
 {items.icon}
 </div>
-<div className='text-white text-xs sm:text-base'>
+<div className='text-white text-xs sm:text-base '>
 {items.text}
 </div>
         </div>

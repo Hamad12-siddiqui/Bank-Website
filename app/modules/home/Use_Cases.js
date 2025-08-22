@@ -35,10 +35,10 @@ const Use_Cases = () => {
             </div>
           </div>
           <div className="flex-1 space-y-4">
-            <h3 className="font-medium text-xl sm:text-2xl text-white">
+            <h3 className="font-medium text-xl sm:text-2xl text-white sm:text-start text-center">
               For Individuals
             </h3>
-            <p className="font-light text-base sm:text-lg text-[#B3B3B3]">
+            <p className="font-light text-base sm:text-lg text-[#B3B3B3] sm:text-start text-center">
               For individuals, our mortgage services pave the way to
               homeownership, and our flexible personal loans provide vital
               support during various life milestones. We also prioritize
@@ -49,28 +49,30 @@ const Use_Cases = () => {
               {financialStats.map((item, index) => (
                 <div
                   key={index}
-                  className="px-2 py-4 sm:py-0 space-y-2 sm:space-y-4 flex flex-col items-start"
+                  className="px-2 py-4 sm:py-0 space-y-2 sm:space-y-4 flex flex-col sm:items-start items-center"
                 >
-                  <h3 className="font-medium text-3xl sm:text-4xl text-[#CAFF33]">
+                  <h3 className="font-medium text-3xl sm:text-4xl text-[#CAFF33] ">
                     {item.percentage}%
                   </h3>
-                  <p className="font-light text-base sm:text-lg text-[#B3B3B3]">
+                  <p className="font-light text-base sm:text-lg text-[#B3B3B3] ">
                     {item.title}
                   </p>
                 </div>
               ))}
             </div>
-            <button className="mt-6 sm:mt-10 px-6 py-3 bg-[#1C1C1C] text-black rounded-full">
-              Learn More
-            </button>
+              <div className="flex justify-center sm:justify-start">
+                <button className="mt-6 sm:mt-10 px-6 py-3 bg-[#1C1C1C] text-white rounded-full mx-auto sm:mx-0">
+                  Learn More
+                </button>
+              </div>
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row justify-between mt-12 gap-20">
           <div className="flex-1 space-y-4 order-2 lg:order-1">
-            <h3 className="font-medium text-xl sm:text-2xl text-white">
+            <h3 className="font-medium text-xl sm:text-2xl text-white sm:text-start text-center">
               For Business
             </h3>
-            <p className="font-light text-base sm:text-lg text-[#B3B3B3]">
+            <p className="font-light text-base sm:text-lg text-[#B3B3B3] sm:text-start text-center">
               For businesses, our tailored financial solutions empower growth
               and sustainability. From business loans to investment planning,
               we help organizations thrive while maintaining financial
@@ -80,9 +82,9 @@ const Use_Cases = () => {
               {financialStats.map((item, index) => (
                 <div
                   key={index}
-                  className="px-2 py-4 sm:py-0 space-y-2 sm:space-y-4 flex flex-col items-start"
+                  className="px-2 py-4 sm:py-0 space-y-2 sm:space-y-4 flex flex-col sm:items-start items-center"
                 >
-                  <h3 className="font-medium text-3xl sm:text-4xl text-[#CAFF33]">
+                  <h3 className="font-medium text-3xl sm:text-4xl text-[#CAFF33] ">
                     {item.percentage}%
                   </h3>
                   <p className="font-light text-base sm:text-lg text-[#B3B3B3]">
@@ -91,9 +93,11 @@ const Use_Cases = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-6 sm:mt-10 px-6 py-3 text-white bg-[#1C1C1C]  rounded-full">
-              Learn More
-            </button>
+            <div className="flex justify-center sm:justify-start">
+                <button className="mt-6 sm:mt-10 px-6 py-3 bg-[#1C1C1C] text-white rounded-full mx-auto sm:mx-0">
+                  Learn More
+                </button>
+              </div>
           </div>
           <div className="flex-1 border-2 bg-[url('/images/right.svg')] bg-no-repeat bg-right-top flex flex-col justify-center items-center rounded-xl bg-[#1A1A1A] order-1 lg:order-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 sm:p-8">
@@ -107,7 +111,7 @@ const Use_Cases = () => {
                     alt={item.title}
                     className="w-12 h-12 sm:w-15 sm:h-15 mx-auto"
                   />
-                  <p className="font-normal text-lg sm:text-xl text-center mt-2 text-white">
+                  <p className="font-normal text-lg sm:text-xl text-center mt-2 text-white ">
                     {item.title}
                   </p>
                 </div>
