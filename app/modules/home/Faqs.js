@@ -12,12 +12,12 @@ const Faqs = () => {
   return (
     <div className="max-w-6xl mx-auto mt-16">
       <div className="space-y-4">
-        <p className="text-[#B3B3B3]">
+        <p className="text-[#B3B3B3] sm:text-start text-center">
           Still you have any questions? Contact our Team via
           support@yourbank.com
         </p>
 
-        <h1 className="text-white text-4xl ">
+        <h1 className="text-white text-4xl sm:text-start text-center ">
           <span className="text-[#CAFF33]">Frequently</span> Asked Questions
         </h1>
       </div>

@@ -71,8 +71,8 @@ const Our_Testimonials = () => {
       },
       {
         breakpoint: 640, // sm screens
-        settings: { slidesToShow: 1 },
-      },
+    settings: { slidesToShow: 1 },
+      }
     ],
   };
 
