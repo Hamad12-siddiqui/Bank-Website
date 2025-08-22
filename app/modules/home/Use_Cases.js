@@ -91,7 +91,7 @@ const Use_Cases = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-6 sm:mt-10 px-6 py-3 bg-[#1C1C1C] text-black rounded-full">
+            <button className="mt-6 sm:mt-10 px-6 py-3 text-white bg-[#1C1C1C]  rounded-full">
               Learn More
             </button>
           </div>

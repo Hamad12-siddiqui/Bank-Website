@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { footer, info } from '../constant/footer.txt';
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -21,11 +22,14 @@ const Footer = () => {
     </h1>
      </div>
     <nav>
-        <ul className='flex flex-wrap gap-4 sm:gap-8 text-white justify-center my-4 sm:my-8 text-sm sm:text-base'>
-            {footer.map((items, index) => {
-                return (
-                <li key={index}>{items.name}</li>
-           ) })}
+        <ul className='flex flex-wrap gap-4 sm:gap-8 text-white justify-center my-4 sm:my-8 text-sm sm:text-base cursor-pointer'>
+                            {footer.map((items, index) => (
+                                    <li key={index}>
+                                        <Link href={items.href} className="hover:underline focus:underline">
+                                            {items.name}
+                                        </Link>
+                                    </li>
+                            ))}
           
         </ul>
     </nav>
@@ -46,7 +50,7 @@ const Footer = () => {
 
 {info.map((items,index) => {
     return(
-        <div key={index} className='flex gap-1 mb-4 sm:mb-10 items-center'>
+        <div key={index} className='flex gap-1 mb-4 sm:mb-10 items-center cursor-pointer'>
             <div className='text-[#CAFF33]'>
 {items.icon}
 </div>
