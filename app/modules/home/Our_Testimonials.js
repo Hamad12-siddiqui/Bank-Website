@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BusinessTestimonialsData, TestimonialsData } from "../../constant/Our_Testimonials.txt.js";
 
@@ -55,10 +55,27 @@ const Our_Testimonials = () => {
     );
   };
 
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3, // default desktop
+    slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -66,16 +83,6 @@ const Our_Testimonials = () => {
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024, // lg se neeche
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 640, // sm screens
-        settings: { slidesToShow: 1 },
-      }
-    ],
   };
 
   const [activeType, setActiveType] = React.useState("individual");
@@ -119,11 +126,11 @@ const Our_Testimonials = () => {
         </div>
 
         {/* Slider Section */}
-        <div className="slider-container px-2 sm:px-6 mt-8 sm:mt-12">
+      <div className="slider-container w-full overflow-hidden px-8 sm:px-16 mt-8 sm:mt-12">
           <Slider {...settings}>
             {carouselData.map((item) => (
               <div key={item.id} className="px-2 sm:px-4 py-4 sm:py-6">
-                <div className="h-[220px] sm:h-[250px] w-full relative flex flex-col items-center justify-center p-4 sm:p-6 space-y-6 border-t-2">
+                <div className="h-auto sm:h-[250px] relative flex flex-col items-center justify-center p-4 sm:p-6 space-y-6 border-t-2">
                   {/* Icon */}
                   <div className="absolute -top-6 bg-black px-2 py-1 ">
                     <img
