@@ -1,12 +1,12 @@
 import { FaPhone } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
 import { TbMessageCircleFilled } from "react-icons/tb"
-
+3
 export const footer = [
     {name: "Home", href : "/"},
-        {name: "Careers", href : "/"},
-            {name: "About", href : "/"},
-                {name: "Security", href : "/"},
+        {name: "Careers", href : "/Careers"},
+            {name: "About", href : "/about"},
+                {name: "Security", href : "/Security"},
 
 ]
 
