@@ -35,18 +35,7 @@ const Footer = () => {
     </nav>
    </div>
    <div className='flex flex-col sm:flex-row gap-4 justify-center mt-9 border-b px-2'>
-   {/* <div className='flex gap-1 '>
-  <TbMessageCircleFilled className='text-[#CAFF33]' size={20}/>
-  <p className='text-white'>hello@skillbirdge.com</p>
-   </div>
-   <div className='flex gap-1'>
-    <FaPhoneAlt  className='text-[#CAFF33]' size={20}/>
-    <p className='text-white'>1234567890</p>
-   </div>
-   <div className='flex gap-1'>
-    <FaLocationDot className='text-[#CAFF33]' size={20}/>
-    <p className='text-white'>Somewhere in the World</p>
-   </div> */}
+   
 
 {info.map((items,index) => {
     return(
@@ -54,9 +43,14 @@ const Footer = () => {
             <div className='text-[#CAFF33]'>
 {items.icon}
 </div>
-<div className='text-white text-xs sm:text-base '>
-{items.text}
-</div>
+<a
+    href={items.href}
+    className='text-white text-xs sm:text-base hover:underline focus:underline'
+    target={items.href.startsWith('http') ? '_blank' : undefined}
+    rel={items.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+>
+    {items.text}
+</a>
         </div>
     )
 })}
