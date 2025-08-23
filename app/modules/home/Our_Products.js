@@ -7,23 +7,23 @@ const Our_Products = () => {
       <div className="w-full max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 text-white">
           <div className="max-w-2xl">
-            <h3 className="font-lexend font-medium text-[32px] md:text-[40px] lg:text-[48px] leading-snug">
+            <h3 className="font-lexend font-medium text-[32px] sm:text-start text-center md:text-[40px] lg:text-[48px] leading-snug">
               <span>Our</span>{" "}
-              <span className="text-[#CAFF33]">Products</span>
+              <span className="text-[#CAFF33] ">Products</span>
             </h3>
-            <p className="font-lexend font-light text-[16px] md:text-[18px] text-[#B3B3B3] mt-2">
+            <p className="font-lexend font-light text-[16px] md:text-[18px] sm:text-start text-center text-[#B3B3B3] mt-2">
               Discover a range of comprehensive and customizable banking
               products at YourBank, designed to suit your unique financial needs
               and aspirations.
             </p>
           </div>
-          <div className="flex justify-center items-center rounded-full gap-2 md:gap-4 px-2 py-2 border border-[#262626] bg-[#1C1C1C]">
+              <div className="flex justify-center items-center mx-auto rounded-full gap-2 md:gap-4 px-2 py-2 border border-[#262626] bg-[#1C1C1C]">
             <button className="text-sm md:text-lg font-medium px-3 md:px-4 py-2 rounded-full bg-[#CAFF33] text-black">
               For Individuals
             </button>
             <button className="text-sm md:text-lg font-medium px-3 md:px-4 py-2">
               For Businesses
-            </button>
+            </button> 
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">

@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 "use client";
+=======
+'use client'
+>>>>>>> 74d55151f564b13ccd443984d8ae05aa95b5a507
 import React, { useState } from "react";
 import { BiMessageRounded } from "react-icons/bi";
 import { JobsData } from "../../constant/Jobopening.js";
 import { Drawer, Button } from "rizzui";
 
 const Job_Openings = () => {
+<<<<<<< HEAD
   const [drawerState, setDrawerState] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
 
@@ -13,6 +18,18 @@ const Job_Openings = () => {
     setDrawerState(true);
   };
 
+=======
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const handleOpenDrawer = (job) => {
+    setSelectedJob(job);
+    setDrawerOpen(true);
+  };
+  const handleCloseDrawer = () => {
+    setDrawerOpen(false);
+    setSelectedJob(null);
+  };
+>>>>>>> 74d55151f564b13ccd443984d8ae05aa95b5a507
   return (
     <div className="flex justify-center items-center mt-10 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl text-white space-y-6 text-center sm:text-start">
@@ -74,8 +91,13 @@ const Job_Openings = () => {
               {/* Apply Button */}
               <div>
                 <button
+<<<<<<< HEAD
                   onClick={() => handleApplyClick(job)}
                   className="mt-6 bg-[#CAFF33] text-black px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-[#b8ff00] transition text-sm sm:text-base"
+=======
+                  className="mt-6 bg-[#CAFF33] text-black px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-[#b8ff00] transition text-sm sm:text-base"
+                  onClick={() => handleOpenDrawer(job)}
+>>>>>>> 74d55151f564b13ccd443984d8ae05aa95b5a507
                 >
                   {job.apply}
                 </button>
@@ -84,33 +106,39 @@ const Job_Openings = () => {
           ))}
         </div>
       </div>
-
-      {/* Drawer */}
-      <Drawer isOpen={drawerState} onClose={() => setDrawerState(false)}>
-        <div className="py-6 px-5 space-y-4">
-          {selectedJob ? (
-            <>
-              <h2 className="text-xl font-semibold">{selectedJob.title}</h2>
-              <p className="text-sm text-gray-400">
-                Location: {selectedJob.location}
-              </p>
-              <p className="text-sm text-gray-400">
-                Department: {selectedJob.department}
-              </p>
-              <p className="text-base mt-3">{selectedJob.description}</p>
-
-              <Button
-                onClick={() => alert("Application Submitted!")}
-                className="bg-[#CAFF33] text-black mt-4"
-              >
-                Submit Application
-              </Button>
-            </>
-          ) : (
-            <p>No job selected</p>
-          )}
+    {/* Drawer */}
+    {drawerOpen && selectedJob && (
+      <div
+        className="fixed top-0 right-0 h-full w-96 bg-[#1C1C1C] shadow-lg z-50 transition-transform duration-300"
+        style={{ transform: drawerOpen ? "translateX(0)" : "translateX(100%)" }}
+      >
+        <div className="flex justify-between items-center p-4 border-b border-[#262626]">
+          <h3 className="text-lg font-bold text-[#CAFF33]">{selectedJob.title}</h3>
+          <button
+            className="text-white text-xl px-2 py-1 hover:text-[#CAFF33]"
+            onClick={handleCloseDrawer}
+            aria-label="Close Drawer"
+          >
+            &times;
+          </button>
         </div>
-      </Drawer>
+        <div className="p-6 text-white overflow-y-auto h-[calc(100%-64px)]">
+          <p className="text-sm text-[#B3B3B3] mb-2">Location: <span className="text-white">{selectedJob.location}</span></p>
+          <p className="text-sm text-[#B3B3B3] mb-4">Department: <span className="text-white">{selectedJob.department}</span></p>
+          <h4 className="text-base font-semibold mb-2 text-[#CAFF33]">Description</h4>
+          <p className="mb-4 text-sm">{selectedJob.description}</p>
+          <h4 className="text-base font-semibold mb-2 text-[#CAFF33]">Requirements</h4>
+          <ul className="list-disc pl-5 text-sm space-y-2">
+            {selectedJob.requirements.map((req, i) => (
+              <li key={i}>{req}</li>
+            ))}
+          </ul>
+          <button className=" text-white bg-[#CAFF33] px-10 py-4 rounded-lg mt-4 flex mx-auto">
+            Apply Now 
+          </button>
+        </div>
+      </div>
+    )}
     </div>
   );
 };

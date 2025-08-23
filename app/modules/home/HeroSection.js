@@ -40,18 +40,18 @@ const HeroSection = () => {
       {/* Left Section */}
       <div className="w-full lg:w-[50%] mb-10 lg:mb-0">
         {/* Banner */}
-        <div className="flex gap-1 items-center border bg-[#262626] py-2 rounded-full px-2 max-w-76">
-          <HiMiniCheckBadge className="text-[#CAFF33]" />
-          <p className="text-white">No LLC Required, No Credit Check.</p>
+        <div className="flex gap-1 items-center border  bg-[#262626] py-2 rounded-full px-2 max-w-76 sm:justify-start justify-center">
+          <HiMiniCheckBadge className="text-[#CAFF33] " />
+          <p className="text-white sm:text-md text-sm  ">No LLC Required, No Credit Check.</p>
         </div>
 
         {/* Hero Text */}
         <div>
-          <h1 className="text-3xl lg:text-5xl text-white mt-5">
+          <h1 className="text-3xl lg:text-5xl text-white mt-5 sm:text-start text-center">
             Welcome to YourBank Empowering Your{" "}
             <span className="text-[#CAFF33]">Financial Journey</span>
           </h1>
-          <p className="text-[#B3B3B3] mt-5 text-sm lg:text-base">
+          <p className="text-[#B3B3B3] mt-5 text-sm lg:text-base sm:text-start text-center">
             At YourBank, our mission is to provide comprehensive banking
             solutions that empower individuals and businesses to achieve their
             financial goals. We are committed to delivering personalized and
@@ -59,7 +59,8 @@ const HeroSection = () => {
           </p>
 
           {/* CTA */}
-          <div className="bg-[#CAFF33] max-w-36 rounded-full  text-black flex justify-center py-3 mt-10 cursor-pointer hover:opacity-90 transition">
+          
+          <div className="bg-[#CAFF33] max-w-36  mx-auto sm:mx-0 rounded-full  text-black flex justify-center py-3 mt-10 cursor-pointer hover:opacity-90 transition ">
             <p>Open Account</p>
           </div>
         </div>
