@@ -1,8 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { BiMessageRounded } from "react-icons/bi";
 import { JobsData } from "../../constant/Jobopening.js";
+import { Drawer, Button } from "rizzui";
 
 const Job_Openings = () => {
+  const [drawerState, setDrawerState] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+
+  const handleApplyClick = (job) => {
+    setSelectedJob(job); // jis job ka button click hua wo store ho jayegi
+    setDrawerState(true);
+  };
+
   return (
     <div className="flex justify-center items-center mt-10 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl text-white space-y-6 text-center sm:text-start">
@@ -17,7 +27,7 @@ const Job_Openings = () => {
         </p>
 
         {/* Job Cards Grid */}
-        <div className="grid grid-cols-1  lg:grid-cols-2 gap-6 mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           {JobsData.jobs.map((job, index) => (
             <div
               key={index}
@@ -61,15 +71,46 @@ const Job_Openings = () => {
                 </div>
               </div>
 
+              {/* Apply Button */}
               <div>
-              <button className="mt-6 bg-[#CAFF33] text-black px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-[#b8ff00] transition text-sm sm:text-base">
-                {job.apply}
-              </button>
+                <button
+                  onClick={() => handleApplyClick(job)}
+                  className="mt-6 bg-[#CAFF33] text-black px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-[#b8ff00] transition text-sm sm:text-base"
+                >
+                  {job.apply}
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Drawer */}
+      <Drawer isOpen={drawerState} onClose={() => setDrawerState(false)}>
+        <div className="py-6 px-5 space-y-4">
+          {selectedJob ? (
+            <>
+              <h2 className="text-xl font-semibold">{selectedJob.title}</h2>
+              <p className="text-sm text-gray-400">
+                Location: {selectedJob.location}
+              </p>
+              <p className="text-sm text-gray-400">
+                Department: {selectedJob.department}
+              </p>
+              <p className="text-base mt-3">{selectedJob.description}</p>
+
+              <Button
+                onClick={() => alert("Application Submitted!")}
+                className="bg-[#CAFF33] text-black mt-4"
+              >
+                Submit Application
+              </Button>
+            </>
+          ) : (
+            <p>No job selected</p>
+          )}
+        </div>
+      </Drawer>
     </div>
   );
 };
