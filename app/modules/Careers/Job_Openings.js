@@ -89,7 +89,7 @@ const Job_Openings = () => {
       {/* Drawer */}
       {drawerOpen && selectedJob && (
         <div
-          className="fixed top-0 right-0 h-full w-96 bg-[#1C1C1C] shadow-lg z-50 transition-transform duration-300"
+          className="fixed top-0 right-0 h-full w-96 p-2 sm:p-0 bg-[#1C1C1C] shadow-lg z-50 transition-transform duration-300"
           style={{
             transform: drawerOpen ? "translateX(0)" : "translateX(100%)",
           }}
@@ -130,7 +130,7 @@ const Job_Openings = () => {
             <button
               onClick={() => {
                 window.location.href =
-                  "mailto:hr@yourcompany.com?subject=Job Application.";
+                  "mailto:hr@yourcompany.com";
               }}
               className="text-white bg-[#CAFF33] px-10 py-4 rounded-lg mt-4 flex mx-auto"
             >
